@@ -19,8 +19,8 @@ class newUser{
 btnIniciarSesion.addEventListener("click", (e) => {
     e.preventDefault()
 
-    const user = document.getElementById("user")
-    const pass = document.getElementById("pass")
+    const user = document.getElementById("user").value
+    const pass = document.getElementById("pass").value
 
     validarYlogear(user, pass)
 
@@ -54,9 +54,9 @@ const validarYlogear = (user, pass) => {
 btnRegistrarte.addEventListener("click", (e) => {
     e.preventDefault()
 
-    const user = document.getElementById("newUser")
-    const pass = document.getElementById("newPass")
-    const name = document.getElementById("newName")
+    const user = document.getElementById("newUser").value
+    const pass = document.getElementById("newPass").value
+    const name = document.getElementById("newName").value
 
     const nuevoUsuario = new newUser(user, pass, name)
 
