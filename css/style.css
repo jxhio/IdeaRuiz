@@ -43,4 +43,12 @@ form input {
   margin: 5px;
 }
 
+#formulario-cotizacion {
+  display: none;
+}
+
+#formulario-agregar {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */

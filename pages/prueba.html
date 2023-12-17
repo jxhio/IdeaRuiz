@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Cotización</title>
+  <style>
+    /* Estilo para ocultar el formulario inicialmente */
+    #formulario-cotizacion {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+    <button id="cotizarBtn">Cotizar Seguro</button>
+
+    <div id="formulario" style="display: none;">
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento"><br><br>
+        
+        <label for="sexo">Sexo:</label>
+        <select id="sexo">
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+        </select><br><br>
+        
+        <label for="fumador">¿Es fumador habitual?</label>
+        <input type="checkbox" id="fumador"><br><br>
+        
+        <button id="cancelarBtn">Cancelar</button>
+        <button id="cotizacionBtn">Hacer Cotización</button>
+    </div>
+</body>
+
+  <script type="module" src="../js/pruebas.js"></script>
+</body>
+</html>

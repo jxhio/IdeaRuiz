@@ -31,9 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-/* document.addEventListener("DOMContentLoaded", () => {
-    generarCardsPolizas(polizasActivas);
-}); */
+
 
 export const generarCardsPolizas = (polizas) => {
     divPolizas.innerHTML = "";
@@ -54,6 +52,7 @@ export const generarCardsPolizas = (polizas) => {
         <li class="list-group-item">${frecPago}</li>
         <li class="list-group-item">${prima}</li>
         </ul>
+        <button type="button" class="btn btn-sm" id="eliminarPoliza">Eliminar póliza</button>
         </div>
         </div>
         </div>`;

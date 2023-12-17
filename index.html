@@ -68,9 +68,73 @@
             <div class="row d-flex">
                 <div class="col">
                     <h1>Polizas</h1>
-                <button onclick="generarVistaAgregar()" type="button" class="btn btn-sm" id="agregarPoliza">Agregar poliza</button>
-                <button type="button" class="btn btn-sm" id="editarPolizas">Editar polizas</button>
-                <div id="formAgregar"></div>
+
+                    <button type="button" class="btn btn-sm" id="agregarPoliza">Agregar poliza</button>
+
+                    <button type="button" class="btn btn-sm" id="cotizarBtn">Cotizar Seguro de Vida</button>
+                    
+                    <div id="formulario-cotizacion">
+                        <h2>Formulario de Cotización</h2>
+                        <form id="cotizacion-form">
+
+                            <label class="form-label" for="fechaNacimiento">Fecha de Nacimiento:</label>
+                            <input type="date" class="form-control" id="fechaNacimiento" required>
+                            
+                            <label class="form-label" for="sexo">Sexo:</label>
+                            <select class="form-select" id="sexo" required>
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                            </select><br>
+                            
+                            <label for="fumador">¿Es fumador habitual?</label>
+                            <input type="checkbox" id="fumador">
+                            <br>
+                            
+                            <button class="btn btn-sm" type="button" id="cancelarBtn">Cancelar</button>
+                            <button class="btn btn-sm" type="submit" id="cotizacionBtn">Enviar</button>
+                        </form>
+                    </div>
+
+                    <div id="formulario-agregar">
+                        <h2>Agregar póliza</h2>
+                        <form id="agregar-form">
+
+                            <label class="form-label" for="aseguradora">Aseguradora:</label>
+                            <input type="text" class="form-control" id="aseguradora" required>
+                            
+                            <label class="form-label" for="ramo">Ramo:</label>
+                            <select class="form-select" id="ramo" required>
+                                <option value="vida">Vida</option>
+                                <option value="auto">Auto</option>
+                                <option value="gastos">Gastos Medicos</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                            
+                            <label class="form-label" for="suma">Suma Asegurada:</label>
+                            <input type="number" class="form-control" id="suma" required>
+
+                            <label class="form-label" for="vigenciaInicio">Inicio de Vigencia:</label>
+                            <input type="date" class="form-control" id="vigenciaInicio" required>
+
+                            <label class="form-label" for="vigenciaFin">Fin de Vigencia:</label>
+                            <input type="date" class="form-control" id="vigenciaFin" required>
+                            
+
+                            <label class="form-label" for="frecPago">Frecuencia de pago:</label>
+                            <select class="form-select" id="frecPago" required>
+                                <option value="mensual">Mensual</option>
+                                <option value="trimestral">Trimestral</option>
+                                <option value="semestral">Semestral</option>
+                                <option value="anual">Anual</option>
+                            </select>
+                            <br>
+                            <button class="btn btn-sm" type="button" id="cancelarBtnAgregar">Cancelar</button>
+                            <button class="btn btn-sm" type="submit" id="agregarNuevaPoliza">Enviar</button>
+                        </form>
+                        
+                    </div>
+
+
                 </div>
                 
             </div>
@@ -91,7 +155,11 @@
 
     <script type="module" src="./js/inicio.js"></script>
 
-    <script type="module" src="./js/agregar-modificar-polizas.js"></script>
+    <script type="module" src="./js/cotizar.js"></script>
+
+    <script type="module" src="./js/agregarPoliza.js"></script>
+
+    <script type="module" src="./js/eliminarPoliza.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
